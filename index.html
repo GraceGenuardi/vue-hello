@@ -12,13 +12,48 @@
 
     <!-- Stampare a schermo un messaggio all’interno di un h1, utilizzando i data. -->
 
+    <div id="app">
+        <h1 :class="[className]">{{ message }}</h1>
+        <p>{{ text }}</p>
 
+        
+        
+    </div>
+
+
+    <!-- SCRIPT VUE -->
+
+    <script>
+        const { createApp } = Vue
+        console.log(Vue)
+
+        
+
+        
+
+        // const createApp = Vue.createApp
+        const option = {
+            data() {
+                return {
+                    message: 'Hello, dear Vue!',
+                    text: 'Welcome to the hell.',
+                    className: 'stile-title',
+                    
+                    
+                }
+            },
+            
+        }
+        const app = createApp(option)
+        // console.log(app)
+        app.mount('#app')
+    </script>
 
 
 
 
 
     <!--Collegamento JS -->
-    <script src="./js/app.js"></script>
+    <!--script src="./js/app.js"></script-->
 </body>
 </html>
