@@ -12,12 +12,19 @@
 
     <!-- Stampare a schermo un messaggio all’interno di un h1, utilizzando i data. -->
 
-    <div id="app" class="image-container">
-        <h1 :class="[className]">{{ message }}</h1>
+    <div id="app">
 
-        <!-- Aggiungiamo img -->
+        <!-- div contenitore img -->
 
-        <img :src="imageURL" alt="Logo Vue JS">
+        <div class="container">
+
+          <h1 :class="[className]">{{ message }}</h1>
+
+            <!-- Aggiungiamo img -->
+
+           <img :src="imageURL" alt="Logo Vue JS">
+
+        </div>
         
 
         
