@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, dear Vue!</title>
+    <title> BONUS:Hello, dear Vue! </title>
     <link rel="stylesheet" href="./css/app.css" />
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
@@ -12,8 +12,12 @@
 
     <!-- Stampare a schermo un messaggio all’interno di un h1, utilizzando i data. -->
 
-    <div id="app">
+    <div id="app" class="image-container">
         <h1 :class="[className]">{{ message }}</h1>
+
+        <!-- Aggiungiamo img -->
+
+        <img :src="imageURL" alt="Logo Vue JS">
         
 
         
@@ -25,34 +29,19 @@
 
     <script>
         const { createApp } = Vue
-        console.log(Vue)
 
-        
-
-        
-
-        // const createApp = Vue.createApp
-        const option = {
+        const app = createApp({
             data() {
                 return {
                     message: 'Hello, dear Vue!',
-                    text: 'Welcome to the hell.',
                     className: 'stile-title',
-                
-                    
-                    
+                    imageURL: 'https://vuejs.org/images/logo.png'
                 }
             },
-            
-        }
-        const app = createApp(option)
-        // console.log(app)
+        })
+
         app.mount('#app')
     </script>
-
-
-
-
 
     <!--Collegamento JS -->
     <!--script src="./js/app.js"></script-->
